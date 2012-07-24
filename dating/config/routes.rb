@@ -1,4 +1,14 @@
 Dating::Application.routes.draw do
+  get "sessions/index"
+
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
+  get "sessions/update"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
