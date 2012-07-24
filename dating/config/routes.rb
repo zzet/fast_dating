@@ -1,15 +1,12 @@
 Dating::Application.routes.draw do
-  get "pages/show"
-  get "sessions/index"
 
-  get "sessions/new"
+  scope :module => :web do
+    root :to => "welcome#index"
 
-  get "sessions/create"
+    resource :sessions, :only => [:new, :create, :destroy]
 
-  get "sessions/destroy"
-
-  get "sessions/update"
-  get "welcome/index"
+    resources :pages, :only => [:show]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
