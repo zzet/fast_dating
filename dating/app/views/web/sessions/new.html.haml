@@ -1,2 +1,9 @@
-%h1 Sessions#new
-%p Find me in app/views/sessions/new.html.haml
+= simple_form_for @user, :url => session_path, :html => {:class => "form-horizontal"} do |f|
+  - if flash[:alert]
+    .alert.alert-error
+      = flash[:alert]
+  = f.input :email
+  = f.input :password
+
+  .form-actions
+    = f.button :submit, t("forms.buttons.login")
