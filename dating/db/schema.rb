@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120724195551) do
+ActiveRecord::Schema.define(:version => 20120724211257) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
@@ -24,15 +24,15 @@ ActiveRecord::Schema.define(:version => 20120724195551) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.string   "password"
+    t.string   "password_digest"
     t.boolean  "remember_me"
     t.string   "firstname"
     t.string   "lastname"
     t.string   "nickname"
     t.string   "avatar"
     t.string   "weburl"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

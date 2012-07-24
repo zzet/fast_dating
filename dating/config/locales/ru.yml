@@ -1,0 +1,7 @@
+ru:
+  web:
+    sessions:
+      new:
+        buttons:
+          login: "Войти"
+  test: "test"

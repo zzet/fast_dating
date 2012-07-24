@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-source "http://gems.undev.cc"
 
 gem 'rails'
 
@@ -12,6 +11,7 @@ group :assets do
   gem 'uglifier'
   gem "therubyracer"
   gem 'sass-rails'
+  gem 'coffee-rails'
 end
 
 gem 'jquery-rails'

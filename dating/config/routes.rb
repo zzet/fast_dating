@@ -1,11 +1,22 @@
 Dating::Application.routes.draw do
 
+
   scope :module => :web do
-    root :to => "welcome#index"
+    scope "(:locale)", :locale => /ru|en/ do
+      root :to => "welcome#index"
 
-    resource :sessions, :only => [:new, :create, :destroy]
+      resource :sessions, :only => [:new, :create, :destroy]
 
-    resources :pages, :only => [:show]
+      resources :pages, :only => [:show]
+
+
+      namespace :admin do
+        root :to => 'welcome#index'
+        resources :users
+        resources :pages
+      end
+    end
+
   end
 
   # The priority is based upon order of creation:
