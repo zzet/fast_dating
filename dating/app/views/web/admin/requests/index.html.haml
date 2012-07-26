@@ -1,2 +1,26 @@
-%h1 Web::Admin::Requests#index
-%p Find me in app/views/web/admin/requests/index.html.haml
+- if @requests.any?
+  %table.table.table-striped.table-bordered.table-condensed
+    %thead
+      %tr
+        %td= sort_link @search, :id, Request.human_attribute_name(:id)
+        %td= sort_link @search, :email, Request.human_attribute_name(:email)
+        %td= sort_link @search, :name, Request.human_attribute_name(:name)
+        %td= sort_link @search, :sex, Request.human_attribute_name(:sex)
+        %td= sort_link @search, :created_at, Request.human_attribute_name(:created_at)
+        %td= sort_link @search, :updated_at, Request.human_attribute_name(:updated_at)
+        %td= t(".control")
+    %tbody
+      - @requests.each do |request|
+        %tr
+          %td= request.id
+          %td= link_to request.email, edit_admin_request_path(request)
+          %td= request.name
+          %td= request.human_sex_name
+          %td= l(request.created_at, :format => :full)
+          %td= l(request.updated_at, :format => :full)
+          %td
+            = link_to edit_admin_request_path(request) do
+              %i.icon-edit
+            = link_to admin_request_path(request), :method => :delete, :data => { :confirm => t(".are_you_sure") } do
+              %i.icon-trash
+

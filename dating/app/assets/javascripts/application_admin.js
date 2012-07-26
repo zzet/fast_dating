@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require ckeditor/init
+//= require jquery.ui.datepicker
+$(function() {
+  $('.datepicker').datepicker({ dateFormat: "yy-mm-dd" });
+});

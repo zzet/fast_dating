@@ -1,10 +1,18 @@
 ru:
   web:
     admin:
+      requests:
+        index:
+          control: "Управление"
+          are_you_sure: "Вы уверены что хотите удалить заявку на участие?"
+        form:
+          tab:
+            info_tab: "Общее"
+            settings_tab: "Настройки"
       pages:
         index:
           control: "Управление"
-          are_you_sure: "Вы уверены что хотите удалить этого пользователя?"
+          are_you_sure: "Вы уверены что хотите удалить страницу?"
         form:
           tab:
             info_tab: "Общее"
@@ -21,4 +29,28 @@ ru:
       new:
         buttons:
           login: "Войти"
-
+  headlines:
+    controllers:
+      web:
+        admin:
+          pages:
+            new:
+              title: "Добавление новой страницы"
+            edit:
+              title: "Редактирование страницы"
+            index:
+              title: "Страницы сайта"
+          users:
+            new:
+              title: "Добавление нового пользователя"
+            edit:
+              title: "Редактирование пользователя"
+            index:
+              title: "Пользователи на сайте"
+          requests:
+            new:
+              title: "Добавление новой заявки"
+            edit:
+              title: "Редактирование заявки"
+            index:
+              title: "Заявки на участие в мероприятии"

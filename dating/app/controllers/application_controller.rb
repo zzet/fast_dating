@@ -3,4 +3,5 @@ class ApplicationController < ActionController::Base
   include AuthHelper
   include FlashHelper
   include HeadlineHelper
+  include RequestTranslateHelper
 end

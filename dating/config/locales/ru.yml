@@ -6,7 +6,22 @@ ru:
     models:
       page: "Страница"
       user: "Пользователь"
+      request: "Заявка на участие"
     attributes:
+      request:
+        id: "№ п/п"
+        birthdate: "Дата рождения"
+        cost: "Стоимость участия"
+        coupone_code: "Код купона"
+        email: "Email"
+        name: "ФИО"
+        phone: "Контактный телефон"
+        sex: "Пол"
+        sexs:
+          male: "Мужской"
+          female: "Женский"
+        created_at: "Дата добавления"
+        updated_at: "Дата обновления"
       page:
         id: "№ п/п"
         title: "Заголовок"
