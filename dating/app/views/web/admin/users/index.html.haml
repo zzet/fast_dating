@@ -1,2 +1,24 @@
-%h1 Web::Admin::Users#index
-%p Find me in app/views/web/admin/users/index.html.haml
+- if @users.any?
+  %table.table.table-striped.table-bordered.table-condensed
+    %thead
+      %tr
+        %td= sort_link @search, :id, User.human_attribute_name(:id)
+        %td= sort_link @search, :email, User.human_attribute_name(:email)
+        %td= sort_link @search, :nickname, User.human_attribute_name(:nickname)
+        %td= sort_link @search, :created_at, User.human_attribute_name(:created_at)
+        %td= sort_link @search, :updated_at, User.human_attribute_name(:updated_at)
+        %td= t(".control")
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user.id
+          %td= link_to user.email, edit_admin_user_path(user)
+          %td= user.nickname
+          %td= l(user.created_at, :format => :full)
+          %td= l(user.updated_at, :format => :full)
+          %td
+            = link_to edit_admin_user_path(user) do
+              %i.icon-edit
+            = link_to admin_user_path(user), :method => :delete, :data => { :confirm => t(".are_you_sure") } do
+              %i.icon-trash
+

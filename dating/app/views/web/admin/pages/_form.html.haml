@@ -1,0 +1,15 @@
+- if f.error_notification
+  .alert.error.fade.in= f.error_notification
+%ul.nav.nav-tabs
+  %li.active
+    %a{:"data-toggle" => "tab", :href => "#infoTab"}= t(".tab.info_tab")
+  %li
+    %a{:"data-toggle" => "tab", :href => "#settingsTab"}= t(".tab.settings_tab")
+.tab-content
+  #infoTab.tab-pane.active
+    = f.input :title, :input_html => { :class => "span6" }
+    = f.input :body, :as => :ckeditor, :input_html => { :class => "span6", :rows => 5 }, :toolbar => "Easy"
+  #settingsTab.tab-pane
+    = f.input :slug, :input_html => {:class => "span6"}
+    = f.input :state_event, :as => :state, :include_blank => @page.human_state_name
+= f.button :submit

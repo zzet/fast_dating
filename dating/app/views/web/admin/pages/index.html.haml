@@ -1,2 +1,26 @@
-%h1 Web::Admin::Pages#index
-%p Find me in app/views/web/admin/pages/index.html.haml
+- if @pages.any?
+  %table.table.table-striped.table-bordered.table-condensed
+    %thead
+      %tr
+        %td= sort_link @search, :id, Page.human_attribute_name(:id)
+        %td= sort_link @search, :title, Page.human_attribute_name(:title)
+        %td= sort_link @search, :slug, Page.human_attribute_name(:slug)
+        %td= sort_link @search, :state, Page.human_attribute_name(:state)
+        %td= sort_link @search, :created_at, Page.human_attribute_name(:created_at)
+        %td= sort_link @search, :updated_at, Page.human_attribute_name(:updated_at)
+        %td= t(".control")
+    %tbody
+      - @pages.each do |page|
+        %tr
+          %td= page.id
+          %td= link_to page.title, edit_admin_page_path(page)
+          %td= page.slug
+          %td= page.state
+          %td= l(page.created_at, :format => :full)
+          %td= l(page.updated_at, :format => :full)
+          %td
+            = link_to edit_admin_page_path(page) do
+              %i.icon-edit
+            = link_to admin_page_path(page), :method => :delete, :data => { :confirm => t(".are_you_sure") } do
+              %i.icon-trash
+

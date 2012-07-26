@@ -1,7 +1,7 @@
 class Page < ActiveRecord::Base
   include UsefullScopes
 
-  attr_accessible :body, :slug, :state, :title
+  attr_accessible :body, :slug, :state, :state_event, :title
 
   validates :title, :presence => true
   validates :body, :presence => true

@@ -1,2 +1,2 @@
-%h1 Web::Admin::Users#new
-%p Find me in app/views/web/admin/users/new.html.haml
+= simple_form_for @user, :url => admin_users_path, :html => {:class => "form-horizontal"} do |f|
+  = render "form", :f => f
