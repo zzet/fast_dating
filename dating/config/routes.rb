@@ -1,5 +1,6 @@
 Dating::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
 
   scope :module => :web do
     scope "(:locale)", :locale => /ru|en/ do

@@ -15,7 +15,7 @@
           %td= page.id
           %td= link_to page.title, edit_admin_page_path(page)
           %td= page.slug
-          %td= page.state
+          %td= page.human_state_name
           %td= l(page.created_at, :format => :full)
           %td= l(page.updated_at, :format => :full)
           %td
