@@ -1,7 +1,39 @@
 ru:
-  web:
-    sessions:
-      new:
-        buttons:
-          login: "Войти"
-  test: "test"
+  time:
+    formats:
+      full: "%d.%m.%Y %H:%M:%S"
+  activerecord:
+    models:
+      page: "Страница"
+      user: "Пользователь"
+    attributes:
+      page:
+        id: "№ п/п"
+        title: "Заголовок"
+        body: "Содержимое"
+        created_at: "Дата создания"
+        updated_at: "Дата обновления"
+        state: "Состояние публикации"
+        state_event: "Состояние публикации"
+        slug: "Адрес"
+      user:
+        id: "№ п/п"
+        email: "Email"
+        nickname: "Ник"
+        avatar: "Аватар"
+        firstname: "Имя"
+        lastname: "Фамилия"
+        password: "Пароль"
+        remember_me: "Запомнить?"
+        weburl: "Адрес сайта"
+        created_at: "Дата создания"
+        updated_at: "Дата обнволения"
+    state_machines:
+      page:
+        states:
+          published: "Опубликовано"
+          unpublished: "Не опубликовано"
+        events:
+          publish: "Опубликовать"
+          unpublish: "Снять с публикации"
+

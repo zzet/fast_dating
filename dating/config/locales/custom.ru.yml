@@ -1,0 +1,24 @@
+ru:
+  web:
+    admin:
+      pages:
+        index:
+          control: "Управление"
+          are_you_sure: "Вы уверены что хотите удалить этого пользователя?"
+        form:
+          tab:
+            info_tab: "Общее"
+            settings_tab: "Настройки"
+      users:
+        index:
+          control: "Управление"
+          are_you_sure: "Вы уверены что хотите удалить этого пользователя?"
+        form:
+          tab:
+            info_tab: "Общее"
+            settings_tab: "Настройки"
+    sessions:
+      new:
+        buttons:
+          login: "Войти"
+
