@@ -7,7 +7,7 @@ class Web::PagesControllerTest < ActionController::TestCase
 
   test "should get show with id" do
     get :show, :id => @page.id
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should get show with slug" do

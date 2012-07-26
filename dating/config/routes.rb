@@ -7,14 +7,14 @@ Dating::Application.routes.draw do
       root :to => "welcome#index"
 
       resource :sessions, :only => [:new, :create, :destroy]
-
       resources :pages, :only => [:show]
-
+      resources :requests, :only => [:create]
 
       namespace :admin do
         root :to => 'welcome#index'
         resources :users
         resources :pages
+        resources :requests
       end
     end
 
