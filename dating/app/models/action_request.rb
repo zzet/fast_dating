@@ -1,4 +1,5 @@
 class ActionRequest < ActiveRecord::Base
+  include UsefullScopes
   attr_accessible :birthdate,
                   :cost,
                   :coupone_code,
@@ -6,6 +7,8 @@ class ActionRequest < ActiveRecord::Base
                   :name,
                   :phone,
                   :sex
+
+  belongs_to :dating_event
 
   class << self
     def avaliable_sexs

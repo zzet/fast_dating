@@ -1,5 +1,11 @@
 Dating::Application.routes.draw do
 
+  get "videos/new"
+
+  get "videos/index"
+
+  get "videos/edit"
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope :module => :web do
