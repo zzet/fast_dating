@@ -15,6 +15,8 @@ Dating::Application.routes.draw do
         resources :users
         resources :pages
         resources :action_requests
+        resources :places
+        resources :dating_events
       end
     end
 
