@@ -8,6 +8,10 @@ class Web::PagesController < Web::ApplicationController
     end
   end
 
+  def video
+    @videos = @search.page params[:page]
+  end
+
   private
 
   def find_by_slug_or_id
