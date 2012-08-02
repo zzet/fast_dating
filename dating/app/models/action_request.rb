@@ -1,4 +1,4 @@
-class Request < ActiveRecord::Base
+class ActionRequest < ActiveRecord::Base
   attr_accessible :birthdate,
                   :cost,
                   :coupone_code,

@@ -9,7 +9,7 @@
   #infoTab.tab-pane.active
     = f.input :name, :input_html => { :class => "span6" }
     = f.input :birthdate, :as => :string, :input_html => { :class => "datepicker" }
-    = f.input :sex, :as => :select, :collection => Request.avaliable_sexs, :include_blank => false
+    = f.input :sex, :as => :select, :collection => ActionRequest.avaliable_sexs, :include_blank => false
     = f.input :phone, :input_html => { :class => "span6" }
     = f.input :email, :input_html => { :class => "span6" }
     = f.input :cost, :input_html => { :class => "span6" }

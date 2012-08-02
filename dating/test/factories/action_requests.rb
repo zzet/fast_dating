@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :request do
+  factory :action_request do
     cost { generate :number }
     coupone_code { generate :string }
     name { generate :string }
@@ -11,7 +11,7 @@ FactoryGirl.define do
     birthdate { generate :date }
   end
 
-  factory :user_request, :parent => :request do
+  factory :user_request, :parent => :action_request do
 
   end
 end

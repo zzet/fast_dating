@@ -8,13 +8,13 @@ Dating::Application.routes.draw do
 
       resource :sessions, :only => [:new, :create, :destroy]
       resources :pages, :only => [:show]
-      resources :requests, :only => [:create]
+      resources :action_requests, :only => [:create]
 
       namespace :admin do
         root :to => 'welcome#index'
         resources :users
         resources :pages
-        resources :requests
+        resources :action_requests
       end
     end
 

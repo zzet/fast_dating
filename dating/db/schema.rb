@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120726230410) do
+ActiveRecord::Schema.define(:version => 20120802170802) do
+
+  create_table "action_requests", :force => true do |t|
+    t.integer  "cost"
+    t.string   "coupone_code"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "sex"
+    t.date     "birthdate"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -36,18 +48,6 @@ ActiveRecord::Schema.define(:version => 20120726230410) do
     t.string   "state"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "requests", :force => true do |t|
-    t.integer  "cost"
-    t.string   "coupone_code"
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "sex"
-    t.date     "birthdate"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|
