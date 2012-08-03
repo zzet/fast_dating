@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :video do
-    name "MyString"
-    description "MyText"
-    code "MyText"
-    sort 1
-    state "MyString"
+    name { generate :string }
+    description { generate :string }
+    code { generate :string }
+    sort { generate :string }
+    state "published"
   end
 end

@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
   factory :place do
-    name "MyString"
-    description "MyText"
-    state "MyString"
-    limit 1
-    map "MyText"
-    latitude "MyString"
-    longitude "MyString"
+    name { generate :string }
+    description { generate :string }
+    state "published"
+    limit { generate :number }
+    map { generate :strng }
+    latitude { generate :strng }
+    longitude { generate :strng }
   end
 end

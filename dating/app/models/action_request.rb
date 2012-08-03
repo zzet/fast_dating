@@ -1,5 +1,6 @@
 class ActionRequest < ActiveRecord::Base
   include UsefullScopes
+
   attr_accessible :birthdate,
                   :cost,
                   :coupone_code,
