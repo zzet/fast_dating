@@ -2,12 +2,12 @@
   %table.table.table-striped.table-bordered.table-condensed
     %thead
       %tr
-        %td= sort_link @search, :id, action_request.human_attribute_name(:id)
-        %td= sort_link @search, :email, action_request.human_attribute_name(:email)
-        %td= sort_link @search, :name, action_request.human_attribute_name(:name)
-        %td= sort_link @search, :sex, action_request.human_attribute_name(:sex)
-        %td= sort_link @search, :created_at, action_request.human_attribute_name(:created_at)
-        %td= sort_link @search, :updated_at, action_request.human_attribute_name(:updated_at)
+        %td= sort_link @search, :id, ActionRequest.human_attribute_name(:id)
+        %td= sort_link @search, :email, ActionRequest.human_attribute_name(:email)
+        %td= sort_link @search, :name, ActionRequest.human_attribute_name(:name)
+        %td= sort_link @search, :sex, ActionRequest.human_attribute_name(:sex)
+        %td= sort_link @search, :created_at, ActionRequest.human_attribute_name(:created_at)
+        %td= sort_link @search, :updated_at, ActionRequest.human_attribute_name(:updated_at)
         %td= t(".control")
     %tbody
       - @action_requests.each do |action_request|

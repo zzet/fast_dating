@@ -1,2 +1,2 @@
-%h1 Web::Admin::Places#new
-%p Find me in app/views/web/admin/places/new.html.haml
+= simple_form_for @action_request, :url => admin_action_requests_path, :html => {:class => "form-horizontal"} do |f|
+  = render "form", :f => f

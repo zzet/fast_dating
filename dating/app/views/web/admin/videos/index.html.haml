@@ -1,2 +1,26 @@
-%h1 Web::Admin::Videos#index
-%p Find me in app/views/web/admin/videos/index.html.haml
+- if @action_requests.any?
+  %table.table.table-striped.table-bordered.table-condensed
+    %thead
+      %tr
+        %td= sort_link @search, :id, ActionRequest.human_attribute_name(:id)
+        %td= sort_link @search, :email, ActionRequest.human_attribute_name(:email)
+        %td= sort_link @search, :name, ActionRequest.human_attribute_name(:name)
+        %td= sort_link @search, :sex, ActionRequest.human_attribute_name(:sex)
+        %td= sort_link @search, :created_at, ActionRequest.human_attribute_name(:created_at)
+        %td= sort_link @search, :updated_at, ActionRequest.human_attribute_name(:updated_at)
+        %td= t(".control")
+    %tbody
+      - @action_requests.each do |action_request|
+        %tr
+          %td= action_request.id
+          %td= link_to action_request.email, edit_admin_action_request_path(action_request)
+          %td= action_request.name
+          %td= action_request.human_sex_name
+          %td= l(action_request.created_at, :format => :full)
+          %td= l(action_request.updated_at, :format => :full)
+          %td
+            = link_to edit_admin_action_request_path(action_request) do
+              %i.icon-edit
+            = link_to admin_action_request_path(action_request), :method => :delete, :data => { :confirm => t(".are_you_sure") } do
+              %i.icon-trash
+

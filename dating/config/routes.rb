@@ -23,6 +23,7 @@ Dating::Application.routes.draw do
         resources :action_requests
         resources :places
         resources :dating_events
+        resources :videos
       end
     end
 

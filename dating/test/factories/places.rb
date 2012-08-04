@@ -6,8 +6,8 @@ FactoryGirl.define do
     description { generate :string }
     state "published"
     limit { generate :number }
-    map { generate :strng }
-    latitude { generate :strng }
-    longitude { generate :strng }
+    map { generate :string }
+    latitude { generate :string }
+    longitude { generate :string }
   end
 end

@@ -1,4 +1,4 @@
-class Web::Admin::VideosController < ApplicationController
+class Web::Admin::VideosController < Web::Admin::ApplicationController
   def index
     params[:search] ||= {:meta_sort => "id.desc"}
     @search = Video.metasearch(params[:search])
